@@ -57,10 +57,8 @@
 // function checkLogin(logins) {
 
 //     const name = prompt("Ім'я користувача:");
-//     logins.includes(name);
 
-
-//     if (logins.includes(name)) {
+//         if (logins.includes(name)) {
 
 //         alert(`Welcome, ${name}!`);
 //           } else {
@@ -78,6 +76,30 @@
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
 
+
+
+// function caclculateAverage(...args) {
+//  console.log(args);
+   
+// let sum = 0;
+    
+//         for (let i = 0; i < args.length; i++) {
+//             if (typeof args[i] === 'number') {
+//             sum += args[i];
+//     }
+
+// }
+
+// return sum / args.length; 
+// }
+
+
+// console.log(caclculateAverage(5, 10, 3));
+ 
+
+
+
+
 // Завдання 4:
 
 // Напишіть функцію, яка сумуватиме сусідні числа 
@@ -88,6 +110,25 @@
 // уточнення: складати необхідно перше число з другим, потім друге - з третім, 
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
+
+
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// let sum = [];
+
+// function result(someArr) {
+
+//     for (let i = 0; i < someArr.length - 1; i += 1) {
+// sum.push(someArr[i] + someArr[i+1]); 
+//     }
+//     return sum;
+// }
+
+// console.log(result(someArr));
+ 
+
+
 
 // Завдання 5:
 
