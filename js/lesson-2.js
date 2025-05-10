@@ -1,6 +1,10 @@
 'use strict';
 
 
+
+
+
+
 // Завдання 1:
 
 // Створіть масив styles з елементами 'jazz' і 'blues'
@@ -13,14 +17,13 @@
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
 
-
 // let styles = ['jazz', 'blues'];
 // styles.push('rock-n-roll');
 // styles[styles.indexOf('blues')] = 'classic';
 
 // console.log(styles);
 
-// function logItems(styles) {   
+// function logItems(styles) {
 
 //     for (let i = 0; i < styles.length; i++) {
 //             console.log(`${i+1} - ${styles[i]}`);
@@ -28,10 +31,6 @@
 // }
 
 // logItems(styles);
-
-
-
-
 
 // Завдання 2:
 
@@ -42,9 +41,6 @@
 // Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 // const logins = ["Peter", "John", "Igor", "Sasha"];
-
-
-
 
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
@@ -61,9 +57,6 @@
 
 //         checkLogin(logins);
 
-
-
-
 // Завдання 3:
 
 // Напишіть функцію calculateAverage(),
@@ -71,33 +64,47 @@
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
 
-
 // function calculateAverage(...args) {
 //     let sum = 0;
 
 //     for (let i = 0; i < args.length; i++) {
 //       if (typeof args[i] === 'number') {
-//         sum += args[i];        
+//         sum += args[i];
 //       }
 //     }
 //     return sum / args.length;
 //   }
 
-//   console.log(calculateAverage(4, 8, 6, 10));  
-
-
+//   console.log(calculateAverage(4, 8, 6, 10));
 
 // Завдання 4:
 
-// Напишіть функцію, яка сумуватиме сусідні числа 
+// Напишіть функцію, яка сумуватиме сусідні числа
 // і пушитиме їх в новий масив.
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
-// уточнення: складати необхідно перше число з другим, потім друге - з третім, 
+// уточнення: складати необхідно перше число з другим, потім друге - з третім,
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
 
+// // ВАРІАНТ з  методом forEach(callback)
 
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
+// function ddd(arr) {
+
+//   let sum = [];
+
+//   arr.forEach(function (number, index) {
+
+//     // console.log(`Index ${index}, value ${number}`);
+
+//     sum.push(arr[index] + arr[index + 1]);
+//   });
+//   const sum1 = sum.slice(0, sum.length - 1);
+//   return console.log(sum1);
+// }
+
+// ddd(someArr);
 
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
@@ -111,19 +118,14 @@
 
 // console.log(result(someArr));
 
-
-
 // Завдання 5:
 
 // Напишіть функцію findSmallestNumber(numbers),
 // яка шукає найменше число в масиві.
-// Додайте перевірку, що функція отримує саме масив, і 
+// Додайте перевірку, що функція отримує саме масив, і
 // якщо функція отримує масив - поверніть з функції найменше число,
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
-
-
-
 
 // const numbers = [20, 5, 35, 56, 12, 24, 7, 80, 3];
 
@@ -131,24 +133,18 @@
 //     let result;
 // if (Array.isArray(add)) {
 //     return result = Math.min(...add);
-// }; 
+// };
 // return 'Sorry, it is not an array!';
 // };
 
 // console.log(findSmallestNumber(numbers));
 
-
-
-
-
-
 // Завдання 6:
-// Напишіть функцію findLongestWord(string), яка 
+// Напишіть функцію findLongestWord(string), яка
 // приймає довільний рядок, що складається лише зі слів, розділених
 // пробілами (параметр string), і повертатиме найдовше слово у реченні.
 // Скористайтесь цим прикладом виклику функції для перевірки її роботи:
 // console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
-
 
 // function findLongestWord(string) {
 
@@ -170,10 +166,6 @@
 //     }
 //     console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 
-
-
-
-
 // Завдання 7:
 
 // Напишіть скрипт, який для об'єкту user, послідовно:
@@ -189,9 +181,6 @@
 //     premium: true,
 //   };
 
-
-
-
 // const user = {
 //     name: "John",
 //     age: 20,
@@ -202,37 +191,31 @@
 //    user.mood = 'happy';
 //     user.hobby = 'skydiving';
 //     user.premium = 'false';
+
 //     console.log(user);
 
 //     const add = Object.keys(user);
 
 //     console.log(add);
 
-
 //     for (const sum of add) {
-
 //        console.log(`${sum}:${user[sum]}`);
-       
 //     }
+
+// // Доступ до властивості обекту через КРАПКУ
 //  console.log(user.name);
+
+// // Доступ до властивості обекту через []  1-й варіант. Замість індексу ставимо ключ як РЯДОК.
 //  console.log(user["name"]);
 
+// // Доступ до властивості обекту через []  2-й варіант. Замість індексу ставимо ЗМІННУ.
+// const sum = "name";
+// console.log(user[sum]);
+
+// // Виклик значення властивості обєкту через []
+
 //  const userName = "age";
-
 // console.log(user[userName]);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Завдання 8:
 
@@ -241,12 +224,11 @@
 // збережіть його результат в змінній sum.
 // Якщо об'єкт salaries пустий, то результат має бути 0
 
-const salaries = {
-    Mango: 100,
-    Poly: 160,
-    Ajax: 1470,
-  };
-
+// const salaries = {
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
+//   };
 
 //   let sum = 0;
 
@@ -255,7 +237,6 @@ const salaries = {
 
 //   }
 // console.log(sum);
-
 
 // const values = Object.values(salaries);
 // console.log(values);
@@ -267,9 +248,6 @@ const salaries = {
 
 // console.log(sum);
 
-
-
-
 // Завдання 9:
 
 // Створіть об'єкт calculator з наступними методами:
@@ -280,8 +258,6 @@ const salaries = {
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
 
-
-
 // const calculator = {
 
 //   read(a, b) {
@@ -291,23 +267,19 @@ const salaries = {
 
 //   sum() {
 //     return this.a + this.b;
-//       }, 
+//       },
 
 //   mult() {
 //     return this.a * this.b;
-//       }, 
+//       },
 // }
-
-
 
 // calculator.read(5, 10);
 // console.log(calculator);
 
-
 // console.log(calculator.sum());
 
 // console.log(calculator.mult());
-
 
 // Завдання 10:
 
@@ -315,9 +287,8 @@ const salaries = {
 // яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
 // Функція рахує і повертає загальну вартість фрукта
 // з таким ім'ям, ціною та кількістю з об'єкта.
-// Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою 
+// Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
 // назвою фрукта, це також треба урахувати.
-
 
 // const fruits = [
 //     { name: "Яблуко", price: 45, quantity: 7 },
@@ -341,5 +312,3 @@ const salaries = {
 // return sum;
 // }
 // console.log(calcTotalPrice(fruits, "Банан"));
-
-
