@@ -4,47 +4,48 @@
 // При перезавантаженні сторінки перевіряти сховище та ставити тему, яка там вказана.
 // Додати класи для змін тем
 
-const checkbox = document.querySelector(".checkbox");
 
-const body = document.querySelector("body");
-const TOPIC_KEY = "topic";
+// const checkbox = document.querySelector(".checkbox");
 
-const darkTheme = "dark-theme";
-const lightTheme = "light-theme";
+// const body = document.querySelector("body");
+// const TOPIC_KEY = "topic";
 
-const getTheme = localStorage.getItem(TOPIC_KEY);
+// const darkTheme = "dark-theme";
+// const lightTheme = "light-theme";
 
-if(getTheme === darkTheme) {
+// const getTheme = localStorage.getItem(TOPIC_KEY);
 
-    body.classList.add("dark");
-    checkbox.checked = true;
-};
+// if(getTheme === darkTheme) {
 
-if(getTheme === lightTheme) {
+//     body.classList.add("dark");
+//     checkbox.checked = true;
+// };
 
-    body.classList.add("light");
-    checkbox.checked = false;
-};
+// if(getTheme === lightTheme) {
 
-checkbox.addEventListener("click", handle);
+//     body.classList.add("light");
+//     checkbox.checked = false;
+// };
+
+// checkbox.addEventListener("click", handle);
 
 
 
-function handle() {
+// function handle() {
 
-    if(checkbox.checked === false) {
-localStorage.setItem(TOPIC_KEY, lightTheme);
-body.classList.add("light");
-body.classList.remove("dark");
-    }
+//     if(checkbox.checked === false) {
+// localStorage.setItem(TOPIC_KEY, lightTheme);
+// body.classList.add("light");
+// body.classList.remove("dark");
+//     }
 
-if(checkbox.checked === true) {
-localStorage.setItem(TOPIC_KEY, darkTheme);
-body.classList.add("dark");
-body.classList.remove("light");
-    }
+// if(checkbox.checked === true) {
+// localStorage.setItem(TOPIC_KEY, darkTheme);
+// body.classList.add("dark");
+// body.classList.remove("light");
+//     }
 
-}
+// }
 
 
 // Створи перелік справ.
@@ -54,14 +55,14 @@ body.classList.remove("light");
 // Забрати завдання зі списку.
 // Список із завданнями має бути доступним після перезавантаження сторінки.
 
-<!-- ЗАДАЧА  -->
+// ЗАДАЧА  
 
-    <form id="task-form">
-      <input type="text" name="taskName" />
-      <button type="submit">Додати</button>
-    </form>
+    // <form id="task-form">
+    //   <input type="text" name="taskName" />
+    //   <button type="submit">Додати</button>
+    // </form>
 
-    <ul id="task-list"></ul>
+    // <ul id="task-list"></ul>
 
 
     
