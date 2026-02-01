@@ -82,3 +82,168 @@
 
 // У вас є ваш командний проєкт, який наповнюється, в ньому розв'язані задачі по 7-8 модулям, можливо навіть з кількома варіантами вирішення.
 // Код розміщений у репозиторії на GitHub, що забезпечить правильну організацію проєктів і домашніх завдань.
+
+
+
+
+//  ...............................
+
+
+
+// Зробити перемикач теми. Зберігати тему у локальному сховище.
+// При перезавантаженні сторінки перевіряти сховище та ставити тему, яка там вказана.
+// Додати класи для змін тем
+
+//   ......................  ФАЙЛ   index4.html
+
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Page 2</title>
+//     <link rel="stylesheet" href="./css/styles.css" />
+
+//     <!-- <script src="./js/lesson-4.js" defer></script> -->
+//   </head>
+//   <body>
+
+
+//  <a class="back-link" href="./index.html">Go back</a>
+
+// <!-- / Зробити перемикач теми. Зберігати тему у локальному сховище.
+// // При перезавантаженні сторінки перевіряти сховище та ставити тему, яка там вказана.
+// // Додати класи для змін тем -->
+
+    
+
+// <h1 class="title">Список тасок</h1>
+//     <p class="text">Вітаємо в вашим списочку</p>
+  
+
+//         <div class="checkbox-thumb">
+//       <input type="checkbox" id="checkbox" class="checkbox" />
+//       <label class="theme-toggle" for="checkbox"></label>
+//       <div class="checkbox-circle"></div>
+   
+
+// <script type="module" src="./js/lesson-4.js" defer></script>
+
+//   </body>
+// </html>
+
+
+//   ......................
+
+
+
+// const checkbox = document.querySelector(".checkbox");
+
+// const body = document.querySelector("body");
+// const TOPIC_KEY = "topic";
+
+// const darkTheme = "dark-theme";
+// const lightTheme = "light-theme";
+
+// const getTheme = localStorage.getItem(TOPIC_KEY);
+
+// if(getTheme === darkTheme) {
+
+//     body.classList.add("dark");
+//     checkbox.checked = true;
+// };
+
+// if(getTheme === lightTheme) {
+
+//     body.classList.add("light");
+//     checkbox.checked = false;
+// };
+
+// checkbox.addEventListener("click", handle);
+
+
+
+// function handle() {
+
+//     if(checkbox.checked === false) {
+// localStorage.setItem(TOPIC_KEY, lightTheme);
+// body.classList.add("light");
+// body.classList.remove("dark");
+//     }
+
+// if(checkbox.checked === true) {
+// localStorage.setItem(TOPIC_KEY, darkTheme);
+// body.classList.add("dark");
+// body.classList.remove("light");
+//     }
+
+// }
+
+
+// Створи перелік справ.
+// Є інпут, який вводиться назва завдання.
+// Після натискання на кнопку "Додати" завдання додається до списку #task-list.
+// Поруч із кожним завданням знаходиться кнопка "Видалити", щоб можна було
+// Забрати завдання зі списку.
+// Список із завданнями має бути доступним після перезавантаження сторінки.
+
+// ЗАДАЧА  
+
+    // <form id="task-form">
+    //   <input type="text" name="taskName" />
+    //   <button type="submit">Додати</button>
+    // </form>
+
+    // <ul id="task-list"></ul>
+
+
+
+    
+
+    
+    
+    
+    //   ......................  ФАЙЛ   index5.html
+    //   ......................
+
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Page 2</title>
+//     <link rel="stylesheet" href="./css/styles.css" />
+
+//     <!-- <script src="./js/lesson-4.js" defer></script> -->
+//   </head>
+//   <body>
+
+
+//  <a class="back-link" href="./index.html">Go back</a>
+
+// <!-- / Зробити перемикач теми. Зберігати тему у локальному сховище.
+// // При перезавантаженні сторінки перевіряти сховище та ставити тему, яка там вказана.
+// // Додати класи для змін тем -->
+
+    
+
+// <h1 class="title">Список тасок</h1>
+//     <p class="text">Вітаємо в вашим списочку</p>
+  
+
+//         <div class="checkbox-thumb">
+//       <input type="checkbox" id="checkbox" class="checkbox" />
+//       <label class="theme-toggle" for="checkbox"></label>
+//       <div class="checkbox-circle"></div>
+   
+
+// <script type="module" src="./js/lesson-5.js" defer></script>
+
+//   </body>
+// </html>
+
+
+
+//   ......................
