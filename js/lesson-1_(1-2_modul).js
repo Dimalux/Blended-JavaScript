@@ -64,41 +64,31 @@
 // // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // // Значення змінної result виведіть в консоль.
 
-
-
-
-
-
-// let number = prompt("Введіть число:");
-// let numerNew = Number(number);
+// const num = Number(prompt("Введіть число:"));
 
 // let result;
 
-// switch (numerNew) {
-//   case 1:
-//    result = `зима`;
-//     break;
-
-//    case 2:
-//    result = `весна`;
-//     break;
-  
-//    case 3:
-//    result = `літо`;
-//     break;
-  
-//      case 4:
-//    result = `зима`;
-//     break;
-//    default:
-//     result = `Вибачте, але ви маєте ввести значення від 1 до 4 включно`;
-//   }
+// switch (num) {    
+// case 1:
+//         result = "зима";
+// break;
+// case 2:
+//       result = "весна";
+// break;
+// case 3:
+//       result = "літо";
+// break;
+// case 4:
+//       result = "осінь";
+// break;
+// default:
+//    result = `Вибачте, але ви маєте ввести значення від 1 до 4 включно`;
+// }
 
 // console.log(result);
 
 
-
-
+//..................................................
 
 
 // Завдання 4:
@@ -110,13 +100,78 @@
 // // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
 
 
+
+// ВАРІАНТ-1
+
+// // 1. Отримуємо кількість хвилин від користувача
+// const data = prompt("Введіть кількість хвилин:");
+
+// // 2. Перетворюємо введене значення в число
+// const number = Number(data);
+// console.log(number);
+
+// // 3. Обчислюємо години (ціла частина від ділення на 60)
+// const hours = Math.floor(number / 60);
+// console.log(hours);
+
+// // 4. Обчислюємо хвилини (залишок від ділення на 60)
+// const minutes = number - hours * 60;
+// console.log(minutes);
+
+// const minutes2 = (number % 60);
+// console.log(minutes2);
+
+// // 5. Форматуємо години та хвилини у двоцифровий формат
+// // padStart(2, '0') додає '0' на початок, якщо число менше 2 цифр
+// const formattedHours = String(hours).padStart(2, '0');
+// console.log(formattedHours);
+
+// const formattedMinutes = String(minutes).padStart(2, '0');
+// console.log(formattedMinutes);
+
+
+// const result = `${formattedHours}:${formattedMinutes}`
+// console.log(result);
+// alert(result);
+
+
+// ...............................
+
+
+// // ВАРІАНТ-2
+
+//  // 1. Отримуємо кількість хвилин від користувача
 // let number = prompt("Введіть кількість хвилин:");
 
+// // 2. Перетворюємо введене значення в число
+// const num = Number(number);
+
+// // 3. Обчислюємо години (ціла частина від ділення на 60)
+// const hours = Math.floor(num / 60);
+// console.log(hours);
+
+// // 4. Обчислюємо хвилини (залишок від ділення на 60 - Скільки разів 60 поміщається в num)
+// const minutes = Math.round(num % 60);
+// console.log(minutes);
+
+// // 5. Форматуємо години та хвилини у двоцифровий формат - перетворюємо спочатку до рядка.
+// // padStart(2, '0') додає '0' на початок, якщо число менше 2 цифр
+// const formattedHours = String(hours).padStart(2, '0');
+// console.log(formattedHours);
+
+// const formattedMinutes = String(minutes).padStart(2, '0')
+// console.log(formattedMinutes);
+
+// // 6. Відображення годин та хвилин в консолі у форматі '01:10' :
+// const result = `${formattedHours}:${formattedMinutes}`
+// console.log(result);
+
+// // можна вивести через alert:
+// alert(result);
 
 
 
-
-
+// ...............................
 
 
 
@@ -140,7 +195,8 @@
 // let user = prompt("Введіть логін:");
 // console.log(user);
 
-// if ("Адмін") {
+// if (user === 
+// "Адмін") {
 //   let password = prompt("Введіть пароль:");
 //   console.log(password);
 // }
