@@ -80,6 +80,28 @@
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
+
+// ВАРІАНТ 1
+
+//  const logins = ["Peter", "John", "Igor", "Sasha"];
+
+//  checkLogin(logins);
+
+// function checkLogin(array) {
+// const userName = prompt("Введіть своє ім'я :");
+// if(array.includes(userName)) {
+//     alert(`Welcome, ${userName}!`);    
+// } else {
+// alert("User not found");
+// }
+// }
+
+
+//  ....................................
+
+
+// ВАРІАНТ 2
+
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
 // function checkLogin(logins) {
@@ -95,12 +117,40 @@
 
 //         checkLogin(logins);
 
+
+
+//  ....................................
+//  ....................................
+
+
 // Завдання 3:
 
 // Напишіть функцію calculateAverage(),
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
+
+
+// ВАРІАНТ 1
+
+// console.log(calculateAverage(1,6,5,7,9));
+
+// function calculateAverage(...rest) {
+// let sum = 0;
+// for(const item of rest) {
+//     if(!isNaN(item)) {
+// sum += item;
+//     } else {return `${item} не є числом!!!`}
+// }
+// return Math.round(sum / (rest.length));
+// }
+
+
+//  ....................................
+
+
+// ВАРІАНТ 2
+
 
 // function calculateAverage(...args) {
 //     let sum = 0;
@@ -114,6 +164,13 @@
 //   }
 
 //   console.log(calculateAverage(4, 8, 6, 10));
+
+
+
+//  ....................................
+//  ....................................
+
+
 
 // Завдання 4:
 
