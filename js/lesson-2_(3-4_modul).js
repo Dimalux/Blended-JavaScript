@@ -237,17 +237,27 @@
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
-// const numbers = [20, 5, 35, 56, 12, 24, 7, 80, 3];
 
-// function findSmallestNumber(add) {
-//     let result;
-// if (Array.isArray(add)) {
-//     return result = Math.min(...add);
-// };
-// return 'Sorry, it is not an array!';
-// };
+
+// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+// // const numbers = "num";
 
 // console.log(findSmallestNumber(numbers));
+
+// function findSmallestNumber(numbers) {
+// if(Array.isArray(numbers)) {
+// return Math.min(...numbers);
+// } else {
+//     return "Sory, it is not an array!";
+// }
+// }
+
+
+
+//  ....................................
+//  ....................................
+
+
 
 // Завдання 6:
 // Напишіть функцію findLongestWord(string), яка
