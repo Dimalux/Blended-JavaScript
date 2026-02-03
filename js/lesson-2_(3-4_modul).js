@@ -181,7 +181,27 @@
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
 
-// // ВАРІАНТ з  методом forEach(callback)
+
+// ВАРІАНТ 1
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// console.log(foo());
+
+// function foo() {
+// let arrSum = [];
+//     for(let i = 0; i < someArr.length - 1; i++) {
+// arrSum.push(someArr[i] + someArr[i + 1])
+//     }
+//    return arrSum;  
+// }
+
+
+
+//  ....................................
+
+
+// ВАРІАНТ 2  -  з  методом forEach(callback)
 
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
@@ -201,17 +221,12 @@
 
 // ddd(someArr);
 
-// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
-// function result(Arr) {
-// let sum = [];
-//     for(let i = 0; i < Arr.length - 1; i += 1) {
-// sum.push(Arr[i] + Arr[i+1]);
-//     }
-//     return sum;
-// }
 
-// console.log(result(someArr));
+//  ....................................
+//  ....................................
+
+
 
 // Завдання 5:
 
