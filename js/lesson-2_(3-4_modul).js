@@ -266,6 +266,31 @@
 // Скористайтесь цим прикладом виклику функції для перевірки її роботи:
 // console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 
+
+// ВАРІАНТ 1  -  Мій
+// console.log(findLongestWord("London is the capital of Great Britain"));
+
+// function findLongestWord(string) {
+// const arrText = string.split(" ");
+// console.log(arrText);
+// let result = [];
+// for(const item of arrText) {
+// result.push(item.length);
+// }
+// console.log(result);
+// const numMax = Math.max(...result)
+// console.log(numMax);
+// const resInd = result.indexOf(numMax);
+// return arrText[resInd];
+// }
+
+
+//  ....................................
+
+
+
+// ВАРІАНТ 2
+
 // function findLongestWord(string) {
 
 //     const words = string.split(" ");
@@ -285,6 +310,12 @@
 // return words[result];
 //     }
 //     console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+
+//  ....................................
+//  ....................................
+
+
 
 // Завдання 7:
 
