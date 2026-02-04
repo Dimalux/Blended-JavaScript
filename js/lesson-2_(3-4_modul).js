@@ -325,12 +325,6 @@
 // 3 - замінить значення premium на false,
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
-// const user = {
-//     name: "John",
-//     age: 20,
-//     hobby: "tenis",
-//     premium: true,
-//   };
 
 // const user = {
 //     name: "John",
@@ -338,12 +332,34 @@
 //     hobby: "tenis",
 //     premium: true,
 //   };
+
+// 1 - додасть поле mood зі значенням 'happy',
+// 2 - замінить hobby на 'skydiving',
+// 3 - замінить значення premium на false:
 
 //    user.mood = 'happy';
 //     user.hobby = 'skydiving';
 //     user.premium = 'false';
 
 //     console.log(user);
+
+
+//  .....................
+
+
+// 4 - виведе зміст об'єкта user у форматі
+// '<ключ>:<значення>' використовуя Object.keys() та for...of
+
+// Ще один мій ВАРІАНТ:
+const keys = Object.keys(user);
+    console.log(keys);
+
+    for(const key of keys) {
+console.log(`${key} : ${user[key]}`);
+    }
+
+//  .....................
+
 
 //     const add = Object.keys(user);
 
@@ -367,6 +383,11 @@
 
 //  const userName = "age";
 // console.log(user[userName]);
+
+
+//  ....................................
+//  ....................................
+
 
 // Завдання 8:
 
