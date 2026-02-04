@@ -351,12 +351,12 @@
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
 
 // Ще один мій ВАРІАНТ:
-const keys = Object.keys(user);
-    console.log(keys);
+// const keys = Object.keys(user);
+//     console.log(keys);
 
-    for(const key of keys) {
-console.log(`${key} : ${user[key]}`);
-    }
+//     for(const key of keys) {
+// console.log(`${key} : ${user[key]}`);
+//     }
 
 //  .....................
 
@@ -394,7 +394,34 @@ console.log(`${key} : ${user[key]}`);
 // Є об'єкт, в якому зберігаються зарплати команди
 // Напишіть код для додавання усіх зарплат та
 // збережіть його результат в змінній sum.
-// Якщо об'єкт salaries пустий, то результат має бути 0
+// Якщо об'єкт salaries пустий, то результат має бути 0.
+
+
+// ВАРІАНТ 1  -  використано  "Object.keys(salaries) + for...of"
+
+// const salaries = {
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
+//   };
+
+//   let sum = 0;
+// console.log(sum);
+
+//   const num = Object.keys(salaries);
+//   console.log(num);
+  
+//   for(const key of num) {
+// sum += salaries[key];
+//   }
+
+//   console.log(sum);
+
+
+//  .....................
+
+// ВАРІАНТ 2  -  використано  "for...in"
+
 
 // const salaries = {
 //     Mango: 100,
@@ -419,6 +446,56 @@ console.log(`${key} : ${user[key]}`);
 // }
 
 // console.log(sum);
+
+
+
+//  ....................................
+//  ....................................
+
+
+
+// Завдання 8-1:
+
+
+// Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості. Функція повинна повернути масив усіх значень властивості з таким ім'ям з кожного об'єкта в масиві products. 
+// Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
+
+// function getAllPropValues(propName) {
+
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];  
+
+// let result = [];
+
+// for(const product of products) {   
+
+//   const arrKeys = Object.keys(product);
+
+// if(!arrKeys.includes(propName)) {
+// return result = [];
+// } else {
+//     result.push(product[propName]);
+// }
+// }
+// return result;
+//   }
+
+//   console.log(getAllPropValues("name"));
+//   console.log(getAllPropValues("price"));
+//   console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("test"));
+
+
+
+//  ....................................
+//  ....................................
+
+
+
 
 // Завдання 9:
 
@@ -484,3 +561,12 @@ console.log(`${key} : ${user[key]}`);
 // return sum;
 // }
 // console.log(calcTotalPrice(fruits, "Банан"));
+
+
+
+
+//  ....................................
+//  ...................................
+
+
+
