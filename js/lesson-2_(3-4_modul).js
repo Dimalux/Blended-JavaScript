@@ -558,52 +558,87 @@
 
 
 
-
 const calculator = {
+  // Метод для збереження значень
   read(a, b) {
     this.a = a;
     this.b = b;
-    // Повертаємо this для ланцюжкових викликів
     return this;
   },
 
+  // Метод для перевірки наявності властивостей 'a' та 'b'
+  exist() {
+    // Перевіряємо, чи обидві властивості існують в об'єкті
+    const hasA = 'a' in this;
+    const hasB = 'b' in this;
+    
+    // Повертаємо true тільки якщо ОБИДВІ властивості існують
+    return hasA && hasB;
+  },
+
+  // Метод для обчислення суми
   sum() {
-    // Додаємо перевірку на наявність значень
-    if (this.a === undefined || this.b === undefined) {
-      console.error('Спочатку викличте read(a, b) для встановлення значень!');
-      return null;
+    // Використовуємо метод exist() для перевірки
+    if (!this.exist()) {
+      return 'No such properties';
     }
+    
+    // Якщо властивості існують - повертаємо суму
     return this.a + this.b;
   },
 
+  // Метод для обчислення добутку
   mult() {
-    // Додаємо перевірку на наявність значень
-    if (this.a === undefined || this.b === undefined) {
-      console.error('Спочатку викличте read(a, b) для встановлення значень!');
-      return null;
+    // Використовуємо метод exist() для перевірки
+    if (!this.exist()) {
+      return 'No such properties';
     }
+    
+    // Якщо властивості існують - повертаємо добуток
     return this.a * this.b;
-  },
+  }
+};
 
-  exist(item) {
-    // Перевіряємо, чи існує властивість в об'єкті
-    const exists = item in this;
-    
-    console.log(`Властивість "${item}" ${exists ? 'існує' : 'не існує'} в калькуляторі`);
-    
-    // Виводимо всі властивості для наглядності
-    console.log('Поточні властивості калькулятора:', Object.keys(this));
-    
-    return exists;
-  },
- }
+// Тестування:
+console.log('=== Тестування калькулятора ===\n');
 
+// Тест 1: Спочатку без встановлених значень
+console.log('Тест 1: До виклику read()');
+console.log('sum():', calculator.sum()); // 'No such properties'
+console.log('mult():', calculator.mult()); // 'No such properties'
+console.log('exist():', calculator.exist()); // false
 
+// Тест 2: Після встановлення значень
+console.log('\nТест 2: Після calculator.read(5, 8)');
 calculator.read(5, 8);
+console.log('exist():', calculator.exist()); // true
+console.log('sum():', calculator.sum()); // 13
+console.log('mult():', calculator.mult()); // 40
 
-calculator.sum() 
+// Тест 3: Перезапис значень
+console.log('\nТест 3: calculator.read(10, 3)');
+calculator.read(10, 3);
+console.log('sum():', calculator.sum()); // 13
+console.log('mult():', calculator.mult()); // 30
 
-calculator.exist(5)
+// Тест 4: Видалення властивості
+console.log('\nТест 4: Після delete calculator.a');
+delete calculator.a;
+console.log('exist():', calculator.exist()); // false
+console.log('sum():', calculator.sum()); // 'No such properties'
+console.log('mult():', calculator.mult()); // 'No such properties'
+
+// Тест 5: Відновлення значення
+console.log('\nТест 5: Після calculator.read(7, 2)');
+calculator.read(7, 2);
+console.log('sum():', calculator.sum()); // 9
+console.log('mult():', calculator.mult()); // 14
+
+// Тест 6: Ланцюжкові виклики (бо read() повертає this)
+console.log('\nТест 6: Ланцюжкові виклики');
+const result = calculator.read(4, 6).sum();
+console.log('calculator.read(4, 6).sum():', result); // 10
+
 
 
 //  ....................................
