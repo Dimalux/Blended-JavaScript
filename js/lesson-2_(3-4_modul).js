@@ -603,7 +603,7 @@ calculator.read(5, 8);
 
 calculator.sum() 
 
-calculator.exist("5")
+calculator.exist(5)
 
 
 //  ....................................
