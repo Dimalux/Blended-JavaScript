@@ -385,6 +385,15 @@
 // console.log(user[userName]);
 
 
+// Доступ до властивості обекту через - ВСІ варіанти:
+
+// const led = "name"
+// console.log(user.name);
+// console.log(user["name"]);
+// console.log(user[led]);
+
+
+
 //  ....................................
 //  ....................................
 
@@ -521,6 +530,16 @@
 //   mult() {
 //     return this.a * this.b;
 //       },
+
+// exist(item) {
+
+//     console.log(Object.keys(this));
+
+//     if(!Object.keys(this).includes(item)) {
+      
+//     }  
+        
+// }
 // }
 
 // calculator.read(5, 10);
@@ -529,6 +548,70 @@
 // console.log(calculator.sum());
 
 // console.log(calculator.mult());
+
+
+// calculator.exist()
+
+
+
+
+
+
+
+
+const calculator = {
+  read(a, b) {
+    this.a = a;
+    this.b = b;
+    // Повертаємо this для ланцюжкових викликів
+    return this;
+  },
+
+  sum() {
+    // Додаємо перевірку на наявність значень
+    if (this.a === undefined || this.b === undefined) {
+      console.error('Спочатку викличте read(a, b) для встановлення значень!');
+      return null;
+    }
+    return this.a + this.b;
+  },
+
+  mult() {
+    // Додаємо перевірку на наявність значень
+    if (this.a === undefined || this.b === undefined) {
+      console.error('Спочатку викличте read(a, b) для встановлення значень!');
+      return null;
+    }
+    return this.a * this.b;
+  },
+
+  exist(item) {
+    // Перевіряємо, чи існує властивість в об'єкті
+    const exists = item in this;
+    
+    console.log(`Властивість "${item}" ${exists ? 'існує' : 'не існує'} в калькуляторі`);
+    
+    // Виводимо всі властивості для наглядності
+    console.log('Поточні властивості калькулятора:', Object.keys(this));
+    
+    return exists;
+  },
+ }
+
+
+calculator.read(5, 8);
+
+calculator.sum() 
+
+calculator.exist("5")
+
+
+//  ....................................
+//  ....................................
+
+
+
+
 
 // Завдання 10:
 
