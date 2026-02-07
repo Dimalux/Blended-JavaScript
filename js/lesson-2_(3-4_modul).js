@@ -459,16 +459,16 @@
 //   },
 
 //   sum() {
-//     return this.exist ? this.valueA + this.valueB : 'No such propeties';
+//     return this.exist() ? this.valueA + this.valueB : 'No such propeties';
 //   },
 
 //   mult() {
-//     return this.exist ? this.valueA * this.valueB : 'No such propeties';
+//     return this.exist() ? this.valueA * this.valueB : 'No such propeties';
 //   },
 
 //   exist() {
 //     // Оператор "in" перевіряє властивість у самому об'єкті
-//     return 'valueA' in calculator && 'valueB' in calculator;
+//     return 'valueA' in this && 'valueB' in this;
 //   },
 // };
 
@@ -584,18 +584,21 @@
 //   ];
 
 // function calcTotalPrice(fruits, fruitName) {
-// let sum = 0;
 
-// for (const fruit of fruits) {
+// let sumFruit = 0;
 
-// if (fruitName === fruit.name) {
-//   sum += fruit.price * fruit.quantity;
+//   for (const fruit of fruits) {
+
+// if(fruit.name === fruitName) {
+//  sumFruit += fruit.price * fruit.quantity;
+
 // }
+//   }
+//   return sumFruit;
 // }
 
-// return sum;
-// }
 // console.log(calcTotalPrice(fruits, "Банан"));
+
 
 //  ....................................
 //  ...................................
