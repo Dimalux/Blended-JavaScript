@@ -1,9 +1,6 @@
 'use strict';
 
-
-
 // Завдання 1:
-
 
 // ВАРІАНТ 1
 
@@ -11,7 +8,6 @@
 // Створіть масив styles з елементами 'jazz' і 'blues'
 // Додайте до кінця масиву елемент 'rock-n-roll' за допомогою відповідного методу масивів
 // Знайдіть елемент 'blues' у масиві та замініть його на 'classic', використовуючи JavaScript-код
-
 
 // 1-а  ЧАСТИНА
 // const styles = ["jazz", "blues"];
@@ -27,15 +23,12 @@
 // }
 // console.log(styles);
 
-
-
 // 2-а  ЧАСТИНА
 // Напишіть функцію logItems(array), яка приймає масив як аргумент
 // і виводить у консоль кожен його елемент у форматі:
 // "<номер елемента> - <значення елемента>".
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
-
 
 // logItems(styles);
 
@@ -44,8 +37,6 @@
 // console.log(`${i + 1} - ${array[i]}`);
 //     }
 // }
-
-
 
 // ВАРІАНТ 2
 
@@ -64,11 +55,8 @@
 
 // logItems(styles);
 
-
 //  ....................................
 //  ....................................
-
-
 
 // Завдання 2:
 
@@ -80,7 +68,6 @@
 // Якщо ім'я відсутнє – виводить повідомлення: "User not found".
 // const logins = ["Peter", "John", "Igor", "Sasha"];
 
-
 // ВАРІАНТ 1
 
 //  const logins = ["Peter", "John", "Igor", "Sasha"];
@@ -90,15 +77,13 @@
 // function checkLogin(array) {
 // const userName = prompt("Введіть своє ім'я :");
 // if(array.includes(userName)) {
-//     alert(`Welcome, ${userName}!`);    
+//     alert(`Welcome, ${userName}!`);
 // } else {
 // alert("User not found");
 // }
 // }
 
-
 //  ....................................
-
 
 // ВАРІАНТ 2
 
@@ -117,11 +102,8 @@
 
 //         checkLogin(logins);
 
-
-
 //  ....................................
 //  ....................................
-
 
 // Завдання 3:
 
@@ -129,7 +111,6 @@
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
-
 
 // ВАРІАНТ 1
 
@@ -145,12 +126,9 @@
 // return Math.round(sum / (rest.length));
 // }
 
-
 //  ....................................
 
-
 // ВАРІАНТ 2
-
 
 // function calculateAverage(...args) {
 //     let sum = 0;
@@ -165,12 +143,8 @@
 
 //   console.log(calculateAverage(4, 8, 6, 10));
 
-
-
 //  ....................................
 //  ....................................
-
-
 
 // Завдання 4:
 
@@ -180,7 +154,6 @@
 // уточнення: складати необхідно перше число з другим, потім друге - з третім,
 // третє - з четвертим і так до кінця.
 // В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
-
 
 // ВАРІАНТ 1
 
@@ -193,13 +166,10 @@
 //     for(let i = 0; i < someArr.length - 1; i++) {
 // arrSum.push(someArr[i] + someArr[i + 1])
 //     }
-//    return arrSum;  
+//    return arrSum;
 // }
 
-
-
 //  ....................................
-
 
 // ВАРІАНТ 2  -  з  методом forEach(callback)
 
@@ -221,12 +191,8 @@
 
 // ddd(someArr);
 
-
-
 //  ....................................
 //  ....................................
-
-
 
 // Завдання 5:
 
@@ -236,8 +202,6 @@
 // якщо функція отримує масив - поверніть з функції найменше число,
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
-
-
 
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 // // const numbers = "num";
@@ -252,12 +216,8 @@
 // }
 // }
 
-
-
 //  ....................................
 //  ....................................
-
-
 
 // Завдання 6:
 // Напишіть функцію findLongestWord(string), яка
@@ -265,7 +225,6 @@
 // пробілами (параметр string), і повертатиме найдовше слово у реченні.
 // Скористайтесь цим прикладом виклику функції для перевірки її роботи:
 // console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
-
 
 // ВАРІАНТ 1  -  Мій
 // console.log(findLongestWord("London is the capital of Great Britain"));
@@ -284,10 +243,7 @@
 // return arrText[resInd];
 // }
 
-
 //  ....................................
-
-
 
 // ВАРІАНТ 2
 
@@ -311,11 +267,8 @@
 //     }
 //     console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 
-
 //  ....................................
 //  ....................................
-
-
 
 // Завдання 7:
 
@@ -343,9 +296,7 @@
 
 //     console.log(user);
 
-
 //  .....................
-
 
 // 4 - виведе зміст об'єкта user у форматі
 // '<ключ>:<значення>' використовуя Object.keys() та for...of
@@ -359,7 +310,6 @@
 //     }
 
 //  .....................
-
 
 //     const add = Object.keys(user);
 
@@ -384,7 +334,6 @@
 //  const userName = "age";
 // console.log(user[userName]);
 
-
 // Доступ до властивості обекту через - ВСІ варіанти:
 
 // const led = "name"
@@ -392,11 +341,8 @@
 // console.log(user["name"]);
 // console.log(user[led]);
 
-
-
 //  ....................................
 //  ....................................
-
 
 // Завдання 8:
 
@@ -404,7 +350,6 @@
 // Напишіть код для додавання усіх зарплат та
 // збережіть його результат в змінній sum.
 // Якщо об'єкт salaries пустий, то результат має бути 0.
-
 
 // ВАРІАНТ 1  -  використано  "Object.keys(salaries) + for...of"
 
@@ -419,18 +364,16 @@
 
 //   const num = Object.keys(salaries);
 //   console.log(num);
-  
+
 //   for(const key of num) {
 // sum += salaries[key];
 //   }
 
 //   console.log(sum);
 
-
 //  .....................
 
 // ВАРІАНТ 2  -  використано  "for...in"
-
 
 // const salaries = {
 //     Mango: 100,
@@ -456,17 +399,12 @@
 
 // console.log(sum);
 
-
-
 //  ....................................
 //  ....................................
-
-
 
 // Завдання 8-1:
 
-
-// Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості. Функція повинна повернути масив усіх значень властивості з таким ім'ям з кожного об'єкта в масиві products. 
+// Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості. Функція повинна повернути масив усіх значень властивості з таким ім'ям з кожного об'єкта в масиві products.
 // Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
 
 // function getAllPropValues(propName) {
@@ -476,11 +414,11 @@
 //     { name: "Scanner", price: 2700, quantity: 3 },
 //     { name: "Droid", price: 400, quantity: 7 },
 //     { name: "Grip", price: 1200, quantity: 9 },
-//   ];  
+//   ];
 
 // let result = [];
 
-// for(const product of products) {   
+// for(const product of products) {
 
 //   const arrKeys = Object.keys(product);
 
@@ -498,13 +436,8 @@
 //   console.log(getAllPropValues("quantity"));
 // console.log(getAllPropValues("test"));
 
-
-
 //  ....................................
 //  ....................................
-
-
-
 
 // Завдання 9:
 
@@ -516,137 +449,121 @@
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
 
-// const calculator = {
+// ВАРІАНТ 2  - МІЙ:
 
+// const calculator = {
 //   read(a, b) {
-//     this.a = a;
-//     this.b = b;
+//     this.valueA = a;
+//     this.valueB = b;
+//     return this; //  реалізація для ланцюжків (наприклад "calculator.read(1, 5).sum()" або calculator.read(5, 7).mult())
 //   },
 
 //   sum() {
-//     return this.a + this.b;
-//       },
+//     return this.exist ? this.valueA + this.valueB : 'No such propeties';
+//   },
 
 //   mult() {
+//     return this.exist ? this.valueA * this.valueB : 'No such propeties';
+//   },
+
+//   exist() {
+//     // Оператор "in" перевіряє властивість у самому об'єкті
+//     return 'valueA' in calculator && 'valueB' in calculator;
+//   },
+// };
+
+// // calculator.read(5, 10);
+// console.log(calculator.read(1, 5).sum());
+// console.log(calculator.read(5, 7).mult());
+// console.log(calculator.exist());
+
+//  ....................................
+
+// ВАРІАНТ 2  - чат GPT:
+
+// const calculator = {
+//   // Метод для збереження значень
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//     return this;
+//   },
+
+//   // Метод для перевірки наявності властивостей 'a' та 'b'
+//   exist() {
+//     // Перевіряємо, чи обидві властивості існують в об'єкті
+//     const hasA = 'a' in this;
+//     const hasB = 'b' in this;
+
+//     // Повертаємо true тільки якщо ОБИДВІ властивості існують
+//     return hasA && hasB;
+//   },
+
+//   // Метод для обчислення суми
+//   sum() {
+//     // Використовуємо метод exist() для перевірки
+//     if (!this.exist()) {
+//       return 'No such properties';
+//     }
+
+//     // Якщо властивості існують - повертаємо суму
+//     return this.a + this.b;
+//   },
+
+//   // Метод для обчислення добутку
+//   mult() {
+//     // Використовуємо метод exist() для перевірки
+//     if (!this.exist()) {
+//       return 'No such properties';
+//     }
+
+//     // Якщо властивості існують - повертаємо добуток
 //     return this.a * this.b;
-//       },
+//   }
+// };
 
-// exist(item) {
+// // Тестування:
+// console.log('=== Тестування калькулятора ===\n');
 
-//     console.log(Object.keys(this));
+// // Тест 1: Спочатку без встановлених значень
+// console.log('Тест 1: До виклику read()');
+// console.log('sum():', calculator.sum()); // 'No such properties'
+// console.log('mult():', calculator.mult()); // 'No such properties'
+// console.log('exist():', calculator.exist()); // false
 
-//     if(!Object.keys(this).includes(item)) {
-      
-//     }  
-        
-// }
-// }
+// // Тест 2: Після встановлення значень
+// console.log('\nТест 2: Після calculator.read(5, 8)');
+// calculator.read(5, 8);
+// console.log('exist():', calculator.exist()); // true
+// console.log('sum():', calculator.sum()); // 13
+// console.log('mult():', calculator.mult()); // 40
 
-// calculator.read(5, 10);
-// console.log(calculator);
+// // Тест 3: Перезапис значень
+// console.log('\nТест 3: calculator.read(10, 3)');
+// calculator.read(10, 3);
+// console.log('sum():', calculator.sum()); // 13
+// console.log('mult():', calculator.mult()); // 30
 
-// console.log(calculator.sum());
+// // Тест 4: Видалення властивості
+// console.log('\nТест 4: Після delete calculator.a');
+// delete calculator.a;
+// console.log('exist():', calculator.exist()); // false
+// console.log('sum():', calculator.sum()); // 'No such properties'
+// console.log('mult():', calculator.mult()); // 'No such properties'
 
-// console.log(calculator.mult());
+// // Тест 5: Відновлення значення
+// console.log('\nТест 5: Після calculator.read(7, 2)');
+// calculator.read(7, 2);
+// console.log('sum():', calculator.sum()); // 9
+// console.log('mult():', calculator.mult()); // 14
 
-
-// calculator.exist()
-
-
-
-
-
-
-
-const calculator = {
-  // Метод для збереження значень
-  read(a, b) {
-    this.a = a;
-    this.b = b;
-    return this;
-  },
-
-  // Метод для перевірки наявності властивостей 'a' та 'b'
-  exist() {
-    // Перевіряємо, чи обидві властивості існують в об'єкті
-    const hasA = 'a' in this;
-    const hasB = 'b' in this;
-    
-    // Повертаємо true тільки якщо ОБИДВІ властивості існують
-    return hasA && hasB;
-  },
-
-  // Метод для обчислення суми
-  sum() {
-    // Використовуємо метод exist() для перевірки
-    if (!this.exist()) {
-      return 'No such properties';
-    }
-    
-    // Якщо властивості існують - повертаємо суму
-    return this.a + this.b;
-  },
-
-  // Метод для обчислення добутку
-  mult() {
-    // Використовуємо метод exist() для перевірки
-    if (!this.exist()) {
-      return 'No such properties';
-    }
-    
-    // Якщо властивості існують - повертаємо добуток
-    return this.a * this.b;
-  }
-};
-
-// Тестування:
-console.log('=== Тестування калькулятора ===\n');
-
-// Тест 1: Спочатку без встановлених значень
-console.log('Тест 1: До виклику read()');
-console.log('sum():', calculator.sum()); // 'No such properties'
-console.log('mult():', calculator.mult()); // 'No such properties'
-console.log('exist():', calculator.exist()); // false
-
-// Тест 2: Після встановлення значень
-console.log('\nТест 2: Після calculator.read(5, 8)');
-calculator.read(5, 8);
-console.log('exist():', calculator.exist()); // true
-console.log('sum():', calculator.sum()); // 13
-console.log('mult():', calculator.mult()); // 40
-
-// Тест 3: Перезапис значень
-console.log('\nТест 3: calculator.read(10, 3)');
-calculator.read(10, 3);
-console.log('sum():', calculator.sum()); // 13
-console.log('mult():', calculator.mult()); // 30
-
-// Тест 4: Видалення властивості
-console.log('\nТест 4: Після delete calculator.a');
-delete calculator.a;
-console.log('exist():', calculator.exist()); // false
-console.log('sum():', calculator.sum()); // 'No such properties'
-console.log('mult():', calculator.mult()); // 'No such properties'
-
-// Тест 5: Відновлення значення
-console.log('\nТест 5: Після calculator.read(7, 2)');
-calculator.read(7, 2);
-console.log('sum():', calculator.sum()); // 9
-console.log('mult():', calculator.mult()); // 14
-
-// Тест 6: Ланцюжкові виклики (бо read() повертає this)
-console.log('\nТест 6: Ланцюжкові виклики');
-const result = calculator.read(4, 6).sum();
-console.log('calculator.read(4, 6).sum():', result); // 10
-
-
+// // Тест 6: Ланцюжкові виклики (бо read() повертає this)
+// console.log('\nТест 6: Ланцюжкові виклики');
+// const result = calculator.read(4, 6).sum();
+// console.log('calculator.read(4, 6).sum():', result); // 10
 
 //  ....................................
 //  ....................................
-
-
-
-
 
 // Завдання 10:
 
@@ -680,11 +597,5 @@ console.log('calculator.read(4, 6).sum():', result); // 10
 // }
 // console.log(calcTotalPrice(fruits, "Банан"));
 
-
-
-
 //  ....................................
 //  ...................................
-
-
-
