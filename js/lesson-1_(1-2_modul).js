@@ -39,7 +39,7 @@
 // Для нашого випадку де min=0, можна писати просто:
 // const min = Math.floor(Math.random() * 59;
 
-
+// ВАРІАНТ-1
 // const min = Math.floor(Math.random() * 59);
 
 // if(min <= 15) {
@@ -51,6 +51,21 @@
 // } else {
 //     alert(`${min} входить до четвертої чверті`);
 // }
+
+
+// .................
+
+// ВАРІАНТ-2
+// const min = Math.floor(Math.random() * 59);
+
+// switch (min) {
+
+// case min > 0 && min <= 15 :
+//     alert
+
+// }
+
+
 
 
 // ......................................
