@@ -55,17 +55,74 @@
 
 // .................
 
-// ВАРІАНТ-2
+
+// ВАРІАНТ-2   практика Blended
+
 // const min = Math.floor(Math.random() * 59);
 
-// switch (min) {
-
-// case min > 0 && min <= 15 :
-//     alert
-
+// if(min >= 0 && min < 15) {
+// alert(`${min} входить до першої чверті`);
+// } else if(min >= 15 && min < 30) {
+// alert(`${min} входить до другої чверті`);
+// } else if(min >= 30 && min < 59) {
+//    alert(`${min} входить до третьої чверті`); 
+// } else {
+//     alert(`${min} входить до четвертої чверті`);
 // }
 
 
+// .................
+
+
+// ВАРІАНТ-3   практика Blended
+// const min = Math.floor(Math.random() * 59);
+
+// let textMin;
+
+// if(min >= 0 && min < 15) {
+//  textMin = "першої";
+// } else if(min >= 15 && min < 30) {
+//  textMin = "другої";
+// } else if(min >= 30 && min < 45) {
+//    textMin = "третьої";
+// } else {
+//      textMin = "четвертої";
+// }
+
+// alert(`${min} входить до ${textMin} чверті`);
+
+
+// .................
+
+
+// ВАРІАНТ-4   Чат GPT - оператор switch. 
+// switch не може працювати з умовами (case з >, <) — switch порівнює значення точно (===), а не по діапазонах. "case (min > 0 && min <= 15)" - БУДЕ ПОМИЛКА !!! Тому що min (наприклад, число 10) порівнюється з результатом виразу (min > 0 && min <= 15) (який повертає true або false). Тобто порівнюється 10 === true, що завжди false.
+// Працюючий варіант (ХИТРІСТЬ):
+
+// const min = Math.floor(Math.random() * 59);  
+
+// // const min = Number(prompt("Введіть число від 0 до 59:"));
+
+// let textMin;
+
+// switch (true) {
+//     case (min >= 0 && min <= 14):
+//         textMin = "першої";
+//         break;
+//     case (min >= 15 && min <= 29):
+//         textMin = "другої";
+//         break;
+//     case (min >= 30 && min <= 44):
+//         textMin = "третьої";
+//         break;
+//     case (min >= 45 && min <= 59):
+//         textMin = "четвертої";
+//         break;
+//     default:
+//         textMin = "невідомої";
+// }
+
+// alert(`${min} входить до ${textMin} чверті`);
 
 
 // ......................................
