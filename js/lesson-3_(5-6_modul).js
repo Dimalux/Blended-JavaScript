@@ -56,12 +56,24 @@
 // з масивів values кожного об'єкту, збережених в одному масиві. 
 // Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-// const data = [
-//  { id: 1, values: [1, 2, 3] },
-//  { id: 2, values: [4, 5, 6] },
-//  { id: 3, values: [7, 8, 9] },
-// ];
+const data = [
+ { id: 1, values: [1, 2, 3] },
+ { id: 2, values: [4, 5, 6] },
+ { id: 3, values: [7, 8, 9] },
+];
 
+
+// Варіант 1   forEach(callback)
+
+
+const numbersNew = [];
+
+data.forEach(item => numbersNew.push(item.values));
+
+console.log(numbersNew);
+
+
+data.flatMap(item => item.values)
 
 
 // Завдання 3:
