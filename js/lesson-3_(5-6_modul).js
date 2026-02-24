@@ -154,19 +154,24 @@
 // console.log(numbersArray.toSorted((a, b) => a - b));     //   [1, 2, 3, 4, 5]
 
 
-
 //..............................
 //..............................
 
 
-
-// Завдання 7:
+// Завдання 7:      Метод toSorted((a, b) => a.localeCompare(b))  -   колбек для сортування рядків     
 
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]
 //  у порядку алфавіту. 
 // Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
+
+// console.log(stringArray.toSorted((a, b) => a.localeCompare(b)));   //   ["apple", "banana", "orange", "pear"]
+
+
+//..............................
+//..............................
+
 
 
 
