@@ -56,24 +56,36 @@
 // з масивів values кожного об'єкту, збережених в одному масиві. 
 // Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
-const data = [
- { id: 1, values: [1, 2, 3] },
- { id: 2, values: [4, 5, 6] },
- { id: 3, values: [7, 8, 9] },
-];
+
+// Варіант 1   Метод forEach(callback) (це метод перебирання масиву, який використовується для заміни циклів for і for...of в роботі з колекцією)   +   Операція ...spread (дозволяє зкопіювати властивості об'єкта, тобто вмтянути з об'єкта тіло - позбутися фігурних дужок) :
+
+// const data = [
+//  { id: 1, values: [1, 2, 3] },
+//  { id: 2, values: [4, 5, 6] },
+//  { id: 3, values: [7, 8, 9] },
+// ];
+
+// const numbersNew = [];
+// data.forEach(item => numbersNew.push(...item.values));
+// console.log(numbersNew);    //   [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+//............
 
 
-// Варіант 1   forEach(callback)
+// Варіант 2    Метод flatMap(callback) застосовується у випадках, коли результат — це багатовимірний масив, який необхідно «розгладити»
+
+// const data = [
+//  { id: 1, values: [1, 2, 3] },
+//  { id: 2, values: [4, 5, 6] },
+//  { id: 3, values: [7, 8, 9] },
+// ];
+
+// const numbersNew = data.flatMap(item => item.values)
+// console.log(numbersNew);
 
 
-const numbersNew = [];
-
-data.forEach(item => numbersNew.push(item.values));
-
-console.log(numbersNew);
-
-
-data.flatMap(item => item.values)
+//..............................
+//..............................
 
 
 // Завдання 3:
