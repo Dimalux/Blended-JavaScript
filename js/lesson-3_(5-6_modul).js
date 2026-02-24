@@ -10,6 +10,45 @@
 // const numbers = [1, 2, 3, 4, 5]
 
 
+// Варіант 1   Цикл "for...of"
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const numbersNew = [];
+// for(const number of numbers) {
+// numbersNew.push(number ** 2);
+// }
+// console.log(numbersNew);   //   [1, 4, 9, 16, 25]
+
+//...............
+
+// Варіант 2   forEach(callback)
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const numbersNew = [];
+
+//  numbers.forEach(item => numbersNew.push(item ** 2))
+
+// console.log(numbersNew);   //   [1, 4, 9, 16, 25]
+
+
+
+//...............
+
+// Варіант 3   Метод map()
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const numbersNew = numbers.map(item => item ** 2)
+
+// console.log(numbersNew);   //   [1, 4, 9, 16, 25]
+
+
+
+//..............................
+//..............................
+
 
 // Завдання 2:
 
