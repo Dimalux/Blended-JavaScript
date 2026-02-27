@@ -380,17 +380,14 @@
 // callAction(item.getQuantity.bind(item));
 
 
+//  ....................................
+//  ....................................
 
 
-//TODO: № 5 на перебирання ✅ ==============================================
-//Зібрати в allTopics масив всіх предметів всіх курсів
-//Виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи
+//TODO: № 5 на перебирання 
 
-
-
-
-
- 
+// 1) Зібрати в "allTopics" масив всіх предметів всіх курсів :
+// 2) Виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи
 
 // const courses = [
 //   {
@@ -430,6 +427,40 @@
 //     ],
 //   },
 // ];
+
+
+// ВАРІАНТ 1 - МІЙ :  за допомогою методів "flatMap", "toSorted" і циклу "for" :
+
+// 1) Зібрати в "allTopics" масив всіх предметів всіх курсів :
+
+// const allTopics = courses.flatMap(item => item.topics);
+// console.log(allTopics);   //  (28) ['VSCode', 'HTML', 'CSS', 'GitHub', 'GitHub Desctop', 'VSCode', 'HTML', 'CSS', 'GitHub', 'Git', 'Terminal', 'VSCode', 'Type system', 'Loops', 'Function', 'Git', 'Conditions', 'Classes', 'GitHub', 'DOM', 'VSCode', 'NPM', 'Bundlers', 'Transpiling', 'Git', 'Promises', 'AJAX', 'GitHub']
+
+
+// 2) Виконати фільтрацію, залишивши в "uniqueTopics" тільки унікальні елементи :
+
+// const allTopics1 = allTopics.toSorted((a, b) => a.localeCompare(b));
+// console.log(allTopics1);
+
+// let uniqueTopics = [];
+
+// for (let i = 0; i < allTopics1.length; i += 1) {
+
+// if (allTopics1[i] !== allTopics1[i + 1]) {
+//   uniqueTopics.push(allTopics1[i]);
+// }
+// }
+
+// console.log(uniqueTopics);  //  (18) ['AJAX', 'Bundlers', 'Classes', 'Conditions', 'CSS', 'DOM', 'Function', 'Git', 'GitHub', 'GitHub Desctop', 'HTML', 'Loops', 'NPM', 'Promises', 'Terminal', 'Transpiling', 'Type system', 'VSCode']
+
+//  ..................
+
+
+
+//  це завдання за допомогою reduce()?
+
+
+// const uniqueTopics = allTopics.filter(item => )    
 
 
 
