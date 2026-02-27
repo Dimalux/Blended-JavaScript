@@ -518,13 +518,72 @@
 //  ..................
 
 
+// ВАРІАНТ 3   МЕНТОР за допомогою КОНСТРУКТОРА (не метода!!!) "new Set(array)" :
+
+// КОНСТРУКТОР "new Set(масив)" створює з масиву ОБ'ЄКТ, в якому всі дублікати автоматично видаляються !!!
+
+// Операція [...new Set(allTopics)] робить наступне:
+// new Set(allTopics) — створює новий об'єкт Set з масиву "allTopics"
+// Set — це колекція унікальних значень (автоматично видаляє всі дублікати)
+// Зберігає порядок першої появи елементів
+// [...] — оператор "spread" (розпакування)
+// Запаковуємо елементи Set назад у новий масив
+
+
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Function",
+//       "Git",
+//       "Conditions",
+//       "Classes",
+//       "GitHub",
+//       "DOM",
+
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Git",
+//       "Promises",
+//       "AJAX",
+//       "GitHub",
+//     ],
+//   },
+// ];
+
+
+// const allTopics = courses
+// .flatMap(course => course.topics)
+// .toSorted();
+
+// console.log(allTopics);
+
+// const uniqueTopics = [...new Set(allTopics)];
+// console.log(uniqueTopics);
 
 
 
+//  ....................................
+//  ....................................
 
-
-  
-// ---------------------------------------------
 
 
 // 4. Заняття 03 (5-6 modules) відео - 16:16
