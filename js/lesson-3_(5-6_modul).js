@@ -456,25 +456,71 @@
 //  ..................
 
 
+// ВАРІАНТ 2   МІЙ за допомогою reduce() :
 
-//  це завдання за допомогою reduce()?
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Function",
+//       "Git",
+//       "Conditions",
+//       "Classes",
+//       "GitHub",
+//       "DOM",
+
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Git",
+//       "Promises",
+//       "AJAX",
+//       "GitHub",
+//     ],
+//   },
+// ];
+
+// 1) Зібрати в "allTopics" масив всіх предметів всіх курсів;
+// 2) Виконати фільтрацію, залишивши в "uniqueTopics" тільки унікальні елементи;
+
+// використовую ланцюжок методів :
+
+// const allTopics = courses
+// .flatMap(item => item.topics)
+// .toSorted((a, b) => a.localeCompare(b))
+// .reduce((prev, item) => 
+// {
+// if (item !== prev[prev.length - 1]) {prev.push(item)}
+// return prev;
+// }
+// , []);
+
+// console.log(allTopics);
 
 
-// const uniqueTopics = allTopics.filter(item => )    
+//  ..................
 
 
 
 
 
-// const allTopics = courses.flatMap(course => course.topics);
-
-//   console.log(allTopics);
-
-//   console.log(allTopics.toSorted());
-
-//   ...new Set(allTopics)
-
-//   const uniqueTopics = [...new Set(allTopics)];
 
 
   
