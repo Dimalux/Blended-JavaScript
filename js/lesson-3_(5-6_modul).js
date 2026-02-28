@@ -273,6 +273,12 @@
 
 
 
+
+
+
+
+
+
 // Завдання 12:
 
  // Напиши клас Client який створює об'єкт з властивостями login email.
@@ -458,44 +464,44 @@
 
 // ВАРІАНТ 2   МІЙ за допомогою reduce() :
 
-// const courses = [
-//   {
-//     name: "Basic HTML+CSS",
-//     topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
-//   },
-//   {
-//     name: "Intermediate HTML+CSS",
-//     topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
-//   },
-//   {
-//     name: "Basic JavaScript",
-//     topics: [
-//       "VSCode",
-//       "Type system",
-//       "Loops",
-//       "Function",
-//       "Git",
-//       "Conditions",
-//       "Classes",
-//       "GitHub",
-//       "DOM",
+const courses = [
+  {
+    name: "Basic HTML+CSS",
+    topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+  },
+  {
+    name: "Intermediate HTML+CSS",
+    topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+  },
+  {
+    name: "Basic JavaScript",
+    topics: [
+      "VSCode",
+      "Type system",
+      "Loops",
+      "Function",
+      "Git",
+      "Conditions",
+      "Classes",
+      "GitHub",
+      "DOM",
 
-//     ],
-//   },
-//   {
-//     name: "Intermediate JavaScript",
-//     topics: [
-//       "VSCode",
-//       "NPM",
-//       "Bundlers",
-//       "Transpiling",
-//       "Git",
-//       "Promises",
-//       "AJAX",
-//       "GitHub",
-//     ],
-//   },
-// ];
+    ],
+  },
+  {
+    name: "Intermediate JavaScript",
+    topics: [
+      "VSCode",
+      "NPM",
+      "Bundlers",
+      "Transpiling",
+      "Git",
+      "Promises",
+      "AJAX",
+      "GitHub",
+    ],
+  },
+];
 
 // 1) Зібрати в "allTopics" масив всіх предметів всіх курсів;
 // 2) Виконати фільтрацію, залишивши в "uniqueTopics" тільки унікальні елементи;
@@ -513,6 +519,20 @@
 // , []);
 
 // console.log(allTopics);
+
+//  ...............
+
+// ВАРІАНТ 2-1   МІЙ за допомогою reduce() БЕЗ "return", тобто з ТЕРНАРНИМ оператором (заміна if). В зв'язку з тим, що prev.push() повертає НЕ значення, а довжину масиву, ТРЕБА  зробити push, але повернути "prev" (оператор кома) і весь вираз взяти ОБОВ'ЯЗКОВО в круглі дужки "(item !== prev[prev.length - 1] ? prev.push(item) : prev.push(""), prev)" :
+
+const allTopics = courses
+.flatMap(item => item.topics)
+.toSorted((a, b) => a.localeCompare(b))
+.reduce((prev, item) => 
+(item !== prev[prev.length - 1] ? prev.push(item) : prev.push(""), prev), []);
+
+console.log(allTopics);
+
+
 
 
 //  ..................
