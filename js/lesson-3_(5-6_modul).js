@@ -356,20 +356,63 @@
 //..............................
 
 
-
-
-
-
-
-
-
-
-
 // Завдання 12:
 
- // Напиши клас Client який створює об'єкт з властивостями login email.
- // Оголоси приватні властивості #login #email, доступ до яких зроби 
- // через геттер та сеттер login email
+ // Напиши клас "Client" який створює об'єкт з властивостями "login" і "email".
+ // Оголоси приватні властивості "#login" і "#email", доступ до яких зроби 
+ // через геттер та сеттер "login" і "email"
+
+// class Client {
+// #login;
+// #email;
+
+// constructor(params) {
+// this.#login = params.login;
+// this.#email = params.email;
+// }
+
+// get login() {
+//    return this.#login
+// }
+
+// // В сеттерах НЕ ПОТРІБНО використовувати "return" !!! 
+// // Сеттер тільки встановлює значення, а повертати нічого не повинен.
+// set login(loginNew) {
+// return this.#login = loginNew;
+// }
+
+
+// get email() {
+//     return this.#email
+// }
+
+// // В сеттерах НЕ ПОТРІБНО використовувати "return" !!! 
+// // Сеттер тільки встановлює значення, а повертати нічого не повинен.
+// set email(emailNew) {
+// return this.#email = emailNew;
+// }
+
+// }
+
+
+// const admin = new Client({login: "Dimalux", email: "astrallux@uj.hj"});
+
+// console.log(admin);  //  Client {#login: 'Dimalux', #email: 'astrallux@uj.hj'}
+
+// console.log(admin.login);   //   Dimalux
+// admin.login = "Dima";
+// console.log(admin.login);   //   Dima
+
+
+// console.log(admin.email);   //   astrallux@uj.hj
+// admin.email = "NEWastralLUX@sd.kj";
+// console.log(admin.email);   //   NEWastralLUX@sd.kj
+
+
+//..............................
+//..............................
+
+
 
 
 
