@@ -235,7 +235,8 @@
  //  операції над числом за допомогою методів класу, підтримуючи  
  // ланцюжковий виклик (method chaining).
  //
- // Вимоги до класу Calculator
+ // Вимоги до класу Calculator:
+
  // - Метод number(value)
  // Встановлює початкове значення для наступних обчислень.
  // Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
@@ -270,6 +271,89 @@
 
 
 //   console.log(result); // 24
+
+
+
+// class Calculator {
+
+//   #value;
+//   #result;
+
+// // - Метод number(value)
+//  // Встановлює початкове значення для наступних обчислень.
+//  // Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
+//   number(value) {
+// this.#value = value;
+// this.#result = this.#value = value;
+// console.log(this.#value);
+// return this;
+//   }
+
+//   // - метод getResult, Повертає поточний результат усіх операцій.
+//  // Не змінює значення, просто повертає його.
+//  getResult() {
+// return this.#result;
+//  }
+
+//  // - метод add - Додає value до поточного значення.
+//  // Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
+
+//  add(arg1) {
+//   this.#result = this.#value += arg1;
+//   this.#result = this.#value;
+//   console.log(this.#result);
+// return this;
+//  }
+
+//   // - метод subtract - Віднімає value від поточного значення. Повертає this.
+//   subtract(arg2) {
+//     this.#result -= arg2;
+//     console.log(this.#result);
+//     return this;
+//   }
+
+// // - метод divide - Ділить поточне значення на value, якщо value не дорівнює 0.
+// // Якщо value === 0, викидає помилку з повідомленням про неможливість ділення.
+// // Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
+
+// divide(arg3) {
+//   if(arg3 !== 0) {
+//     this.#result /= arg3;    
+//       } else{console.log("Error value null");}
+//       console.log(this.#result);
+//     return this;
+// }
+
+// // - метод multiply -Множить поточне значення на value. Повертає this.
+// multiply(arg4) {
+//   this.#result *= arg4;
+//   console.log(this.#result);
+//   return this;
+// }
+// }
+
+
+
+// // Приклад використання:
+//  const calc = new Calculator();
+
+// const result = calc
+//   .number(10)   // 10   Встановлюємо початкове значення 10
+//   .add(5)       // 15   Додаємо 5 (10 + 5 = 15)
+//   .subtract(3)  // 12   Віднімаємо 3 (15 - 3 = 12)
+//   .multiply(4)  // 48   Множимо на 4 (12 * 4 = 48)
+//   .divide(2)    // 24   Ділимо на 2 (48 / 2 = 24)
+//   .getResult(); // 24   Отримуємо результат: 24
+
+
+//   console.log(result); // 24
+
+
+
+//..............................
+//..............................
+
+
 
 
 
