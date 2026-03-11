@@ -277,14 +277,13 @@
 // class Calculator {
 
 //   #value;
-//   #result;
-
+ 
 // // - Метод number(value)
 //  // Встановлює початкове значення для наступних обчислень.
 //  // Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
 //   number(value) {
 // this.#value = value;
-// this.#result = this.#value = value;
+// this.#value = value;
 // console.log(this.#value);
 // return this;
 //   }
@@ -292,23 +291,27 @@
 //   // - метод getResult, Повертає поточний результат усіх операцій.
 //  // Не змінює значення, просто повертає його.
 //  getResult() {
-// return this.#result;
+// console.log(this.#value);
+// return this.#value;
 //  }
 
 //  // - метод add - Додає value до поточного значення.
 //  // Повертає сам об'єкт (this) для підтримки ланцюжкових викликів.
 
+// // УВАГА для підтримки ланцюжкових викликів :
+// //  const result = calc.number(10).add(5).add(3).getResult();
+// //  !!! тобто після виконання "calc.number(10)", де в середині метода є "return this", ми отримуємо на виході "calc" - і наступна дія в ланцюжку буде "calc.add(5)" з новим значенням "#value"  !!!
+
 //  add(arg1) {
-//   this.#result = this.#value += arg1;
-//   this.#result = this.#value;
-//   console.log(this.#result);
+//   this.#value += arg1;  
+//   console.log(this.#value);
 // return this;
 //  }
 
 //   // - метод subtract - Віднімає value від поточного значення. Повертає this.
 //   subtract(arg2) {
-//     this.#result -= arg2;
-//     console.log(this.#result);
+//     this.#value -= arg2;
+//    console.log(this.#value);
 //     return this;
 //   }
 
@@ -318,16 +321,18 @@
 
 // divide(arg3) {
 //   if(arg3 !== 0) {
-//     this.#result /= arg3;    
+//     this.#value /= arg3;    
 //       } else{console.log("Error value null");}
-//       console.log(this.#result);
+//          console.log(this.#value);
+
 //     return this;
 // }
 
 // // - метод multiply -Множить поточне значення на value. Повертає this.
 // multiply(arg4) {
-//   this.#result *= arg4;
-//   console.log(this.#result);
+//   this.#value *= arg4;
+//    console.log(this.#value);
+
 //   return this;
 // }
 // }
@@ -346,10 +351,7 @@
 //   .getResult(); // 24   Отримуємо результат: 24
 
 
-//   console.log(result); // 24
-
-
-
+ 
 //..............................
 //..............................
 
