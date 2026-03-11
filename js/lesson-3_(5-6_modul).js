@@ -413,9 +413,6 @@
 //..............................
 
 
-
-
-
 // Завдання 13:
 
   //  Наслідування у класах!
@@ -436,12 +433,52 @@
   // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
 
 
+//   class Person {
+
+// constructor(params) {
+// this.name = params.name;
+// this.age = params.age;
+// this.gender = params.gender;
+// this.email = params.email;
+//  }
+  
+// getDetails() {
+//      return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email
+//     }
+// }
+//   }
 
 
+// class Employee extends Person {
+
+// constructor(params) {
+// super(params)
+//   this.salary = params.salary;
+//    this.department = params.department;
+//    }
+
+//    getEmployeeDetails() {
+//         return {
+//       salary: this.salary,
+//       department: this.department
+//     }
+//    }
+
+// }
+
+// const mango = new Employee({name: "Dima", age: 58, gender: "male", email: "astra@hj.hy", salary: 105000, department: "AT"});
+
+// console.log(mango.getDetails());     //  {name: 'Dima', age: 58, gender: 'male', email: 'astra@hj.hy'}
+
+// console.log(mango.getEmployeeDetails());  //  {salary: 105000, department: 'AT'}
 
 
-  // ................................
-
+//..............................
+//..............................
 
 
 
