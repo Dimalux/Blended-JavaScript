@@ -786,7 +786,7 @@
 // 4. Заняття 03 (5-6 modules) відео - 16:16
 
 
-//Напиши функцію конструктор User для створення користувача з такими властивостями
+//Напиши функцію конструктор (клас) User для створення користувача з такими властивостями
 
 //a. userName - ім'я, рядок
 //b. age - вік, число
@@ -796,23 +796,27 @@
 //Додай метод getInfo(), який повертає рядок:
 //`Користувачеві ${} ${} років і в нього ${} публікацій.`
 
+// (userName, age, numbersOfPost)
 
-// function User(userName, age, numbersOfPost) {
-//   this.userName = userName;
-//   this.age = age;
-//   this.numbersOfPost = numbersOfPost;
-
-//   this.getInfo = function () {
+// class User {
+//   constructor(params) {
+//  this.userName = params.userName;
+//   this.age = params.age;
+//   this.numbersOfPost = params.numbersOfPost;
+//   }
+ 
+// getInfo () {
 //     return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
 //   };
 // }
 
-
 // const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
 // console.log(polly);
-// polly.getInfo();
+// console.log(polly.getInfo());
 
-//----------------
+
+//  ....................................
+//  ....................................
 
 
 //Напиши клас Client який створює об'єкт
