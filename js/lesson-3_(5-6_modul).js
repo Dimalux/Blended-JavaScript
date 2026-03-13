@@ -915,69 +915,112 @@
 // Задача 6 :
 
 //  Написати клас, який буде представляти зоопарк тварин.
-//  Створити загальний клас Animal для тварин.
-// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
-// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
-//  методи для отримання інформації про тварину та для годівлі тварин.
-//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
-// метод для виведення списку всіх тва
+//  Створити загальний клас "Animal" для тварин.
 
+// У зоопарку повинні бути різні типи тварин (два дочірних класи): такі як ссавці (Mammal), птахи (Bird) тощо.
+// Кожен тип тварин (кожен дочірній клас) повинен мати свої властивості та методи:
+//  метод "getInfo" - для отримання інформації про тварину;
+//  метод "feed" - для отримання інформації годівлі тварин.
+
+//  Крім того, зоопарк (class ZOO) повинен мати:
+//  метод "addAnimal" - для додавання тварин до списку;
+//  метод "listAnimal"  -  для виведення списку всіх тварин.
 
 
 // class Animal {
 //   constructor(name, type) {
-//     this.name = name;
-//     this.type = type;
+// this.name = name;
+// this.type = type;
 //   }
 
+//   // метод "getInfo" - для отримання інформації про тварину :
 //   getInfo() {
-//     return `Name animal: ${this.name}, Type animal: ${this.type}`;
+// return `Name animal: ${this.name}, Type animal: ${this.type}`
 //   }
 
+//   //  метод "feed" - для отримання інформації годівлі тварин :
 //   feed() {
-//     console.log(`Feeding ${this.name}....`);
+// console.log(`Feeding ${this.name}...`);
 //   }
 // }
 
-// console.log(Animal);
 
-
-// Mammal - хижак
-// Bird - птах
-
-
+// //  ...... для ССАВЦІВ :
 
 // class Mammal extends Animal {
-//   constructor(name, type, food) {
-// super(name, type);
-// this.food = food;
-//  }
-//   live() {
-//     console.log(`Lives in ${this.name}....`);
+
+// constructor(name, type, food) {
+//   super(name, type);
+//   this.food = food;
+// }
+
+// // метод "getInfo" - для отримання інформації про тварину :
+// getInfo() {
+// return `${super.getInfo()}, Food animal: ${this.food}`;
+// }
+
+// live() {
+//   console.log(`Lives in ${this.name}...`);
 //   }
-//  }
+// }
 
-
-
-
+// //  ...... для ПТАХІВ :
 
 // class Bird extends Animal {
-//   constructor(name, type, food) {
+
+//   constructor(name, type, wingspan) {
 // super(name, type);
-// this.food = food;
+// this.wingspan = wingspan;
+//   }  
+  
+//   // метод "getInfo" - для отримання інформації про тварину :
+//   getInfo() {
+// return `${super.getInfo()}, Wingspan animal: ${this.wingspan}`;
+// }
+
+// fly() {
+//   console.log(`Flying in 20m ${this.wingspan}...`);
+//   }
+// }
+
+// //  ...... створюємо клас для ЗООПАРКА :
+
+// class Zoo {
+//   constructor() {
+// this.animals = [];
 //   }
 
-//   live() {
-//     console.log(`Lives in ${this.name}....`);
-//   }
+//   //  метод "addAnimal" - для додавання тварин до списку;
+// addAnimal(animal) {
+// this.animals.push(animal);
+// }
 
-//  }
+// //  метод "listAnimal"  -  для виведення списку всіх тварин :
+// listAnimal() {
+// console.log(`Zoo animals:`);
+// this.animals.forEach(animal => console.log(animal.getInfo()))
+// }
+// }
+
+// //  ......
+
+// const zoo = new Zoo();
+
+// const lion = new Mammal("Simba", "predator", "meat");
+// const eagle = new Bird("Black Eagle", "bird", 10)
+
+// zoo.addAnimal(lion);
+// zoo.addAnimal(eagle);
+
+// zoo.listAnimal();   //  Zoo animals: 
+// //   Name animal: Simba, Type animal: predator, Food animal: meat
+// //   Name animal: Black Eagle, Type animal: bird, Food animal: undefined
 
 
 
 
-
-
+//  ....................................
+//  ....................................
 
 
 
