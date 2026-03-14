@@ -1143,10 +1143,56 @@
 // const studentsArr = students.flatMap(student => student.courses);
 // console.log(studentsArr);  //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
 
-// const unique = studentsArr.filter((item, index, array) => 
+// const result = studentsArr.filter((item, index, array) => 
 //     array.indexOf(item) === index
 // );
-// console.log(unique);  // ['mathematics', 'physics', 'science', 'biology']
+// console.log(result);  // ['mathematics', 'physics', 'science', 'biology']
+
+
+// //  ......
+
+
+// ВАРІАНТ 3 (чат GPT) -  з Set (найсучасніший) спеціальний об'єкт у JavaScript, який:
+// Зберігає тільки унікальні значення;
+// Автоматично видаляє дублікати
+
+// Створюємо Set (ОБ'ЄКТ) з масиву
+// const uniqueSet = new Set(studentsArr);
+// console.log(uniqueSet); 
+// Set(4) {'mathematics', 'physics', 'science', 'biology'}
+
+// Перетворюємо назад у МАСИВ (найчастіше використання)
+// const result = [...uniqueSet];
+
+// const students = [
+//   { name: "Mango", courses: ["mathematics", "physics"] },
+//   { name: "Poly", courses: ["science", "mathematics"] },
+//   { name: "Kiwi", courses: ["physics", "biology"] },
+// ];
+
+// // список всіх предметів :
+// const studentsArr = students.flatMap(student => student.courses);
+// console.log(studentsArr);  //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
+
+
+// const result = [...new Set(studentsArr)];
+// console.log(result); // ['mathematics', 'physics', 'science', 'biology']
+
+
+
+// //  ......
+
+
+// ВАРІАНТ 4  -  з reduce()
+// javascript
+// const unique = studentsArr.reduce((acc, item) => {
+//     if (!acc.includes(item)) {
+//         acc.push(item);
+//     }
+//     return acc;
+// }, []);
+// console.log(unique); // ['mathematics', 'physics', 'science', 'biology']
+
 
 
 
