@@ -1102,7 +1102,7 @@
 // У масиві students зберігається колекція студентів зі списком предметів, які відвідує студент у властивості courses. Кілька студентів можуть відвідувати один і той самий предмет. Необхідно скласти список всіх предметів, які відвідує ця група студентів, поки що навіть повторюваних.
 
 
-// ВАРІАНТ 1 :
+// ВАРІАНТ 1 (МІЙ) :
 
 // const students = [
 //   { name: "Mango", courses: ["mathematics", "physics"] },
@@ -1113,7 +1113,7 @@
 // // список всіх предметів :
 // const studentsArr = students.flatMap(student => student.courses);
 
-// console.log(studentsArr);   //   ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
+// console.log(studentsArr);   //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
 
 
 // // фільтруємо список всіх предметів від дублювання:
@@ -1125,7 +1125,30 @@
 // }
 // }
 
-// console.log(result);  //   ['mathematics', 'physics', 'science', 'biology']
+// console.log(result);  //  ['mathematics', 'physics', 'science', 'biology']
+
+
+// //  ......
+
+
+// ВАРІАНТ 2 (чат GPT) -  Варіант з filter() та indexOf() :
+
+// const students = [
+//   { name: "Mango", courses: ["mathematics", "physics"] },
+//   { name: "Poly", courses: ["science", "mathematics"] },
+//   { name: "Kiwi", courses: ["physics", "biology"] },
+// ];
+
+// // список всіх предметів :
+// const studentsArr = students.flatMap(student => student.courses);
+// console.log(studentsArr);  //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
+
+// const unique = studentsArr.filter((item, index, array) => 
+//     array.indexOf(item) === index
+// );
+// console.log(unique);  // ['mathematics', 'physics', 'science', 'biology']
+
+
 
 
 
