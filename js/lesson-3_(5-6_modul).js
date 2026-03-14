@@ -954,7 +954,14 @@
 //   this.food = food;
 // }
 
+
 // // метод "getInfo" - для отримання інформації про тварину :
+
+// //  super.getInfo() викликає метод батьківського класу :
+// // 1) super посилається на батьківський клас Animal ;
+// // 2) super.getInfo() повертає рядок з базовою інформацією: "Name animal: [name], Type animal: [type]" ;
+// // 3) до результату батьківського методу додається кома та нова інформація про їжу: ", Food animal: ${this.food}"
+
 // getInfo() {
 // return `${super.getInfo()}, Food animal: ${this.food}`;
 // }
