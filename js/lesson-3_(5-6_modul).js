@@ -1024,12 +1024,8 @@
 // //   Name animal: Black Eagle, Type animal: bird, Food animal: undefined
 
 
-
-
 //  ....................................
 //  ....................................
-
-
 
 
 
@@ -1039,11 +1035,25 @@
 // квадрати кожного елементу вхідного масиву. 
 // Очікуваний результат: [1, 4, 9, 16, 25].
 
+
+// ВАРІАНТ 1 :
+
 // const numbers = [1, 2, 3, 4, 5]
 
+// const numbersNew =[];
+// for (let i = 0; i < numbers.length; i += 1) {
+
+//   // Оператор (**) використовується для піднесення числа до степеня
+// numbersNew.push(numbers[i] ** 2);
+// }
+
+// console.log(numbersNew);
 
 
-// ВАРІАНТ 1 ___________________
+// //  ......
+
+
+// ВАРІАНТ 2 :
 
 // const numbers = [1, 2, 3, 4, 5];
 // console.log(numbers);
@@ -1058,21 +1068,36 @@
 //     console.log(number);
 
 
+// //  ......
 
 
-// ВАРІАНТ 2 ___________________
+// ВАРІАНТ 3 :
 
-    //     const numbers = [1, 2, 3, 4, 5];
-    //     console.log(numbers);
-        
-    //     const numberAdd = [];
-    //     console.log(numberAdd);
+//         const numbers = [1, 2, 3, 4, 5];
 
-    // for (const number of numbers) {
-    //     numberAdd.push(number * number); 
-    //   }
+//        const  numbersNew = [];
+//         for (const number of numbers) {
 
-    //   console.log(numberAdd);
+// numbersNew.push(number ** 2);
+//         }
+
+// console.log(numbersNew);
+
+
+// //  ......
+
+
+// ВАРІАНТ 4 :
+
+//         const numbers = [1, 2, 3, 4, 5];
+
+// console.log(numbers.map(number => number ** 2));
+
+
+//  ....................................
+//  ....................................
+
+
 
 
 
