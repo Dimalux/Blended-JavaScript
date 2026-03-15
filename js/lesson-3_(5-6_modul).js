@@ -1141,12 +1141,12 @@
 
 // // список всіх предметів :
 // const studentsArr = students.flatMap(student => student.courses);
-// console.log(studentsArr);  //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
+// console.log(studentsArr);   //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
 
-// const result = studentsArr.filter((item, index, array) => 
-//     array.indexOf(item) === index
-// );
-// console.log(result);  // ['mathematics', 'physics', 'science', 'biology']
+// const result = studentsArr.filter((student, ind, arr) => 
+// arr.indexOf(student) === ind
+// )
+// console.log(result);    // ['mathematics', 'physics', 'science', 'biology']
 
 
 // //  ......
@@ -1179,23 +1179,29 @@
 // console.log(result); // ['mathematics', 'physics', 'science', 'biology']
 
 
-
 // //  ......
 
 
-// ВАРІАНТ 4  -  з reduce()
-// javascript
-// const unique = studentsArr.reduce((acc, item) => {
-//     if (!acc.includes(item)) {
-//         acc.push(item);
-//     }
-//     return acc;
-// }, []);
-// console.log(unique); // ['mathematics', 'physics', 'science', 'biology']
+// ВАРІАНТ 4  -  з reduce() :
 
+// const students = [
+//   { name: "Mango", courses: ["mathematics", "physics"] },
+//   { name: "Poly", courses: ["science", "mathematics"] },
+//   { name: "Kiwi", courses: ["physics", "biology"] },
+// ];
 
+// // список всіх предметів :
+// const studentsArr = students.flatMap(student => student.courses);
+// console.log(studentsArr);  //  ['mathematics', 'physics', 'science', 'mathematics', 'physics', 'biology']
 
+// const result = studentsArr.reduce((prev, student) => {
 
+//   //   якщо є фігурні дужки НЕЯВНЕ ПОВЕРНЕННЯ не працює, м/б один вираз !!!
+// if(!prev.includes(student)) {prev.push(student)}
+// return prev
+// }, [])
+
+// console.log(result);
 
 
 //  ....................................
