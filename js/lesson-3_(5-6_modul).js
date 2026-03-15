@@ -1327,13 +1327,11 @@
 
 
 
-// Завдання 7 :
+// Завдання 7  -   Відсортуйте масив чисел [4, 71, 2, 5, 22, 1, 3, 15]  у порядку зростання : 
 
-// Відсортуйте масив чисел [4, 71, 2, 5, 22, 1, 3, 15]  у порядку зростання : 
+// const numbersArray = [4, 71, 2, 5, 22, 1, 3, 15];
 
-const numbersArray = [4, 71, 2, 5, 22, 1, 3, 15];
-
-console.log(numbersArray.toSorted((a, b) => a - b));   //   [1, 2, 3, 4, 5, 15, 22, 71]
+// console.log(numbersArray.toSorted((a, b) => a - b));   //   [1, 2, 3, 4, 5, 15, 22, 71]
 
 
 //  ....................................
@@ -1341,13 +1339,11 @@ console.log(numbersArray.toSorted((a, b) => a - b));   //   [1, 2, 3, 4, 5, 15, 
 
 
 
-// Завдання 8 :
+// Завдання 8  -  Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]   у порядку алфавіту : 
 
-// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]   у порядку алфавіту : 
+// const fruit = ["banana", "orange", "apple", "pear"];
 
-// const fruit = ["Banana", "Orange", "apple", "pear"];
-
-// console.log(fruit.toSorted((a, b) => a.localeCompare(b)));   //   ['apple', 'Banana', 'Orange', 'pear']
+// console.log(fruit.toSorted((a, b) => a.localeCompare(b)));   //   ['apple', 'banana', 'orange', 'pear']
 
 
 
@@ -1356,35 +1352,23 @@ console.log(numbersArray.toSorted((a, b) => a - b));   //   [1, 2, 3, 4, 5, 15, 
 
 
 
-// Завдання 9 :
+// Завдання 9  -   Відсортуйте масив об'єктів ЗА ВІКОМ у порядку зростання :
 
-//  Відсортуйте масив об'єктів за віком у порядку зростання. 
-// Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
+const users = [
+ { name: 'John', age: 27 },
+ { name: 'Jane', age: 31 },
+ { name: 'Bob', age: 19 },
+];
 
-//const users = [
-//  { name: 'John', age: 27 },
-//  { name: 'Jane', age: 31 },
-//  { name: 'Bob', age: 19 },
-// ];
-
-
-//  РІШЕННЯ  ____________всі числа 2-х значні !!!____
+console.log(users.toSorted((a, b) => a.age - b.age));   //   [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}]
 
 
-// const users = [
-//  { name: 'John', age: 27 },
-//  { name: 'Jane', age: 31 },
-//  { name: 'Bob', age: 19 },
-// ];
-
-
-// console.log(users.toSorted((a, b) => a.age - b.age));
- 
+//  ....................................
+//  ....................................
 
 
 
-
-// Завдання 9:
+// Завдання 10 :
 
 // Дано масив об'єктів. 
 // Створіть новий масив, що містить тільки об'єкти, в яких 
