@@ -1354,13 +1354,13 @@
 
 // Завдання 9  -   Відсортуйте масив об'єктів ЗА ВІКОМ у порядку зростання :
 
-const users = [
- { name: 'John', age: 27 },
- { name: 'Jane', age: 31 },
- { name: 'Bob', age: 19 },
-];
+// const users = [
+//  { name: 'John', age: 27 },
+//  { name: 'Jane', age: 31 },
+//  { name: 'Bob', age: 19 },
+// ];
 
-console.log(users.toSorted((a, b) => a.age - b.age));   //   [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}]
+// console.log(users.toSorted((a, b) => a.age - b.age));   //   [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}]
 
 
 //  ....................................
@@ -1368,38 +1368,25 @@ console.log(users.toSorted((a, b) => a.age - b.age));   //   [{name: "Bob", age:
 
 
 
-// Завдання 10 :
+// Завдання 10  -   Дано масив об'єктів. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. 
 
-// Дано масив об'єктів. 
-// Створіть новий масив, що містить тільки об'єкти, в яких 
-// вік більше 20 років. 
-// Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
-
-//const user = [
+// const users = [
 //  { name: 'John', age: 27 },
 //  { name: 'Jane', age: 31 },
 //  { name: 'Bob', age: 19 },
 // ]
 
+// console.log(users.filter(user => user.age > 20));   //   [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
 
-//РІШЕННЯ  ____________(подібне Завдання 8)___
 
-
-// const user = [
-//  { name: 'John', age: 27 },
-//  { name: 'Jane', age: 31 },
-//  { name: 'Bob', age: 19 },
-// ]
-
-// console.log(user.filter(item => item.age > 20));
+//  ....................................
+//  ....................................
 
 
 
 
-
-
-// Завдання 10:
+// Завдання 11 :
 
 // Дано масив чисел [1, 2, 3, 4, 5]. 
 // Застосуйте метод для обчислення суми елементів масиву.
