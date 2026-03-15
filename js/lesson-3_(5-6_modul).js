@@ -1329,12 +1329,11 @@
 
 // Завдання 7 :
 
-// Відсортуйте масив чисел [4, 71, 2, 5, 22, 1, 3, 15]; 
-// у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+// Відсортуйте масив чисел [4, 71, 2, 5, 22, 1, 3, 15]  у порядку зростання : 
 
-// const numbersArray = [4, 71, 2, 5, 22, 1, 3, 15];
+const numbersArray = [4, 71, 2, 5, 22, 1, 3, 15];
 
-// console.log(numbersArray.toSorted((a, b) => a - b));
+console.log(numbersArray.toSorted((a, b) => a - b));   //   [1, 2, 3, 4, 5, 15, 22, 71]
 
 
 //  ....................................
@@ -1344,21 +1343,20 @@
 
 // Завдання 8 :
 
-// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]
-//  у порядку алфавіту. 
-// Очікуваний результат: ["apple", "banana", "orange", "pear"].
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]   у порядку алфавіту : 
 
-// const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const fruit = ["Banana", "Orange", "apple", "pear"];
 
-
-//  РІШЕННЯ  ____________всі регістри однакові!!!__
-
-// const stringArray = ['banana', 'orange', 'apple', 'pear'];
-// console.log(stringArray.toSorted());
+// console.log(fruit.toSorted((a, b) => a.localeCompare(b)));   //   ['apple', 'Banana', 'Orange', 'pear']
 
 
 
-// Завдання 8:
+//  ....................................
+//  ....................................
+
+
+
+// Завдання 9 :
 
 //  Відсортуйте масив об'єктів за віком у порядку зростання. 
 // Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
