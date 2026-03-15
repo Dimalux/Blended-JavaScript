@@ -1266,7 +1266,7 @@
 // Завдання 6:    Знайдіть перше непарне число
 
 
-// Завдання 6   ВАРІАНТ 1   -   Цикл "for...of" і оператор "break" :
+// Завдання 6   ВАРІАНТ 1 (МІЙ)  -   Цикл "for...of" і оператор "break" :
 
 // const numbers = [2, 1, 6, 8, 9, 10, 12];
 
@@ -1293,6 +1293,29 @@
 
 // console.log(numbers.find(number => number % 2 !== 0));
 
+
+//  ...........
+
+
+// Завдання 6   ВАРІАНТ 3  (чат GPT)  -   Класичний цикл "for" і оператор "break" :
+
+// for(let i = 0; i < numbers.length; i++) {
+//   if(numbers[i] % 2 !== 0) {
+//     console.log(numbers[i]); // 1
+//     break;
+//   }
+// }
+
+// Завдання 6   ВАРІАНТ 4  (чат GPT)  -   цикл  "while" :
+
+// let i = 0;
+// while(i < numbers.length) {
+//   if(numbers[i] % 2 !== 0) {
+//     console.log(numbers[i]); // 1
+//     break;
+//   }
+//   i++;
+// }
 
 
 //  ....................................
