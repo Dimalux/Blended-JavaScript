@@ -1490,43 +1490,60 @@
 
 
 // Завдання 13 :
- // Напиши клас Client який створює об'єкт з властивостями login email.
- // Оголоси приватні властивості #login #email, доступ до яких зроби 
- // через геттер та сеттер login email
+ // Напиши клас Client який створює об'єкт з властивостями "login" i "email".
+ // Оголоси приватні властивості "#login" i "#email", доступ до яких зроби 
+ // через геттер та сеттер "login" i "email" :
 
 
+// class Client {
+// #login;
+// #email;
 
-//РІШЕННЯ  ___________
-
-//  class Client {
-//   #login;
-//   #email;
-
-//   constructor(login, email) {
-//     this.#login = login;
-//     this.#email = email;
-//   }
-
-//   get login() {
-//     return this.#login;
-//   }
-//   set login(newLogin) {
-//     this.#login = newLogin;
-//   }
-
-  
-//   get email() {
-//     return this.#email;
-//   }  
-//   set email(newEmail) {
-//     this.#email = newEmail;
-//   }
+// constructor(login, email) {
+// this.#login = login;
+// this.#email = email;
 // }
 
+// get login() {
+// return this.#login;
+// }
+
+// set login(newLogin) {
+// this.#login = newLogin;
+// }
+
+// get email() {
+// return this.#email;
+// }
+
+// set email(newEmail) {
+// this.#email = newEmail;
+// }
+// }
+
+// const user = new Client("Dimalux", "astrallux@com.ua");
+// console.log(user);
+
+
+// console.log(user.login);     // геттер "login"      Dimalux
+// console.log(user.email);     // геттер "email"      astrallux@com.ua
+
+
+// // Сетери викликаються через присвоєння (user.login = "DIMA"), а не через виклик функції (user.login("DIMA") ❌ Так викликають метод, а не сетер !!!) :
+// user.login = "DIMA";          // cеттер "login"      
+// user.email = "Dima777@hj.gt"; // cеттер "email"
+
+// console.log(user.login);     // геттер "login"
+// console.log(user.email);     // геттер "email"
 
 
 
-// Завдання 13:
+//  ....................................
+//  ....................................
+
+
+
+// Завдання 14:
 
   //  Наслідування у класах!
   // Cтворіть клас `Person`, який містить наступні властивості:
